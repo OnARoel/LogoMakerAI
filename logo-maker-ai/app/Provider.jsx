@@ -1,16 +1,15 @@
-import React from 'react'
-import Header from './Components/Header'
+import React from "react";
+import Header from "./Components/Header";
 
-const Provider = ({children}) => {
+const Provider = ({ children }) => {
   return (
     <>
-    <div>
+      <div>
         <Header />
-        {children}
-    </div>
+        <div className="px-10 lg:px-32 xl:px-48 2xl 2xl:px-56">{children}</div>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default Provider
-
+export default Provider;

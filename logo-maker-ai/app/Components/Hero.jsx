@@ -1,8 +1,14 @@
+"use client";
+
 import React from "react";
 import Lookup from "../data/Lookup";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import Link from "next/link";
 
 const Hero = () => {
+  const [logo, setLogo] = useState("");
+
   return (
     <>
       <div className="flex items-center mt-32 flex-col gap-5">
@@ -21,8 +27,11 @@ const Hero = () => {
             className="px-6 h-full py-3 border border-gray-300 rounded-lg flex-1"
             placeholder={Lookup.TitlePlaceHolder}
             type="text"
+            onChange={(e) => setLogo(e.target.value)}
           />
-          <Button className="w-40 h-full px-6 py-3">Get Started</Button>
+          <Link href={`/create?title=${logo}`}>
+            <Button className="w-40 h-full px-6 py-3">Get Started</Button>
+          </Link>
         </div>
       </div>
     </>

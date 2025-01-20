@@ -3,6 +3,10 @@ import React, { useState } from "react";
 import TitleLogo from "./components/TitleLogo";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import LogoDesc from "./components/LogoDesc";
+import LogoColors from "./components/LogoColors";
+import LogoDesigns from "./components/LogoDesigns";
+import LogoIdeas from "./components/LogoIdeas";
 
 const Page = () => {
   const [step, setStep] = useState(1);
@@ -16,6 +20,8 @@ const Page = () => {
     }));
   };
 
+  console.log(formData);
+
   return (
     <>
       <div className="mt-28 p-10 border rounded-xl 2xl:mx-72">
@@ -23,6 +29,14 @@ const Page = () => {
           <TitleLogo
             onHandleInputChange={(v) => onHandleInputChange("title", v)}
           />
+        ) : step === 2 ? ( 
+            <LogoDesc onHandleInputChange={(v) => onHandleInputChange("desc", v)} />
+        ) : step === 3 ? (
+            <LogoColors onHandleInputChange={(v) => onHandleInputChange("colors", v)} />
+        ) : step === 4 ? (  
+            <LogoDesigns onHandleInputChange={(v) => onHandleInputChange("design", v)} />
+        ) : step === 5 ? (  
+            <LogoIdeas onHandleInputChange={(v) => onHandleInputChange("ideas", v)} />
         ) : null}
 
         <div className="flex items-center justify-between mt-10">

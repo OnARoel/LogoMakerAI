@@ -7,7 +7,7 @@ export default {
     LogoTitleDescription: "Generate a logo for your brand",
     LogoDescTitle: "Logo Ipsum",
     LogoIdeaTitle: "Logo Ipsum",
-    LogoDesignTitle: "Logo Ipsum",
+    LogoDesignTitle: "Logo Ipsum LALA",
     LogoDesignDesc: "Generate a logo for your brand",
     LogoColorPaletteTitle: "Logo Ipsum",
     LogoColorPaletteDesc: "Generate a logo for your brand",

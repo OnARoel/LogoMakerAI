@@ -4,8 +4,8 @@ import Lookup from "@/app/data/Lookup";
 import Colors from "../../data/Colors";
 import { useState } from "react";
 
-const LogoColors = ({onHandleInputChange}) => {
-  const [selectedOption, setSelectedOption] = useState(null);
+const LogoColors = ({onHandleInputChange, formData}) => {
+  const [selectedOption, setSelectedOption] = useState(formData?.colors);
   return (
     <>
       <div className="my-10">

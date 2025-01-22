@@ -27,16 +27,16 @@ const Page = () => {
       <div className="mt-28 p-10 border rounded-xl 2xl:mx-72">
         {step === 1 ? (
           <TitleLogo
-            onHandleInputChange={(v) => onHandleInputChange("title", v)}
+            onHandleInputChange={(v) => onHandleInputChange("title", v)} formData={formData}
           />
         ) : step === 2 ? ( 
-            <LogoDesc onHandleInputChange={(v) => onHandleInputChange("desc", v)} />
+            <LogoDesc onHandleInputChange={(v) => onHandleInputChange("desc", v)} formData={formData} />
         ) : step === 3 ? (
-            <LogoColors onHandleInputChange={(v) => onHandleInputChange("colors", v)} />
+            <LogoColors onHandleInputChange={(v) => onHandleInputChange("colors", v)} formData={formData} />
         ) : step === 4 ? (  
-            <LogoDesigns onHandleInputChange={(v) => onHandleInputChange("design", v)} />
+            <LogoDesigns onHandleInputChange={(v) => onHandleInputChange("design", v)} formData={formData} />
         ) : step === 5 ? (  
-            <LogoIdeas onHandleInputChange={(v) => onHandleInputChange("ideas", v)} />
+            <LogoIdeas onHandleInputChange={(v) => onHandleInputChange("ideas", v)} formData={formData} />
         ) : null}
 
         <div className="flex items-center justify-between mt-10">
